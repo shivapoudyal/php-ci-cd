@@ -1,10 +1,14 @@
 ngnix-image:
  image: nginx:latest
  ports:
-  - "80:80"
+  - "8050:80"
  volumes:
   - /var/lib/jenkins/workspace/php-ci-cd/:/phpprojects/project1/
   - /var/lib/jenkins/workspace/php-ci-cd/site1.conf:/etc/nginx/conf.d/site1.conf
+
+ links:
+   - php-image
+
 
 php-image:
  image: php:7-fpm
