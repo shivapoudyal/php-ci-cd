@@ -4,7 +4,7 @@ ngnix-image:
   - "8050:80"
  volumes:
   - /var/lib/jenkins/workspace/php-ci-cd/:/var/lib/jenkins/workspace/php-ci-cd
-#   - /var/lib/jenkins/workspace/php-ci-cd/site1.conf:/etc/nginx/conf.d/site1.conf
+  - /var/lib/jenkins/workspace/php-ci-cd/site1.conf:/etc/nginx/conf.d/default.conf
 
  links:
    - php-image
