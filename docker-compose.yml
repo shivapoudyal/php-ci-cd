@@ -1,4 +1,4 @@
-ngnix-image:
+ngnix:
  name: nginx:latest
  ports:
   - "80:80"
@@ -6,7 +6,7 @@ ngnix-image:
   - .:/phpprojects
   - .site1.conf:/etc/nginx/conf.d/site1.conf
 
-php-image:
+php:
  name: php:7-fpm
  volumes:
   - ./phpprojects
