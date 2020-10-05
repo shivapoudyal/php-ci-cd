@@ -3,10 +3,10 @@ ngnix-image:
  ports:
   - "80:80"
  volumes:
-  - .:/phpprojects/project1/
-  - .site1.conf:/etc/nginx/conf.d/site1.conf
+  - ./:/phpprojects/project1/
+  - ./site1.conf:/etc/nginx/conf.d/site1.conf
 
 php-image:
  image: php:7-fpm
  volumes:
-  - ./phpprojects
+  - ./:/phpprojects/
