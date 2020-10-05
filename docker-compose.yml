@@ -1,5 +1,5 @@
 ngnix-image:
- image: nginx:latest
+ image: nginx
  ports:
   - "8050:80"
  volumes:
