@@ -31,15 +31,7 @@
       pip:
         name: docker-py
         state: present   
-
-    - name: Run ngnix container
-      docker_container:
-       name: ngnix
-       image: "shivapoudyal/mynginx:1.0"
-       state: started
-       published_ports:
-        - 80:80
-
+        
     - name: Run php container
       docker_container:
        name: php
