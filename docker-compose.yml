@@ -1,4 +1,5 @@
 ngnix-image:
+ container_name: nginx
  image: nginx:latest
  ports:
   - "80:80"
