@@ -38,7 +38,7 @@
        image: "shivapoudyal/mynginx:1.0"
        state: started
        published_ports:
-        - 0.0.0.0:80:80
+        - 80:80
 
     - name: Run php container
       docker_container:
@@ -46,4 +46,4 @@
        image: "shivapoudyal/myphp:1.0"
        state: started
        published_ports:
-        - 0.0.0.0:9000:9000
+        - 9000:9000
