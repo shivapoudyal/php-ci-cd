@@ -1,0 +1,4 @@
+another-server ansible_host=172.31.18.177 ansible_user=ubuntu
+
+[production-server]
+another-server
