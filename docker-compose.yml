@@ -1,11 +1,8 @@
 ngnix-image:
  container_name: nginx
- image: nginx:latest
+ build: .
  ports:
   - "80:80"
- volumes:
-  - /var/lib/jenkins/workspace/php-ci-cd:/phpprojects
-  - /var/lib/jenkins/workspace/php-ci-cd/default.conf:/etc/nginx/conf.d/default.conf
 
  links:
    - php-image
@@ -16,3 +13,4 @@ php-image:
  image: php:7-fpm
  volumes:
   - /var/lib/jenkins/workspace/php-ci-cd/:/phpprojects
+
