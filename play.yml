@@ -43,7 +43,7 @@
     - name: Run ngnix container
       docker_container:
        name: ngnix
-       auto-remove: yes
+       cleanup: yes
        image: "shivapoudyal/mynginx:1.0"
        state: started
        published_ports:
