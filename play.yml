@@ -30,7 +30,16 @@
     - name: installing docker-py python modules
       pip:
         name: docker-py
-        state: present   
+        state: present  
+
+    - name: Run ngnix container
+      docker_container:
+       name: ngnix
+       auto-remove: yes
+       image: "shivapoudyal/mynginx:1.0"
+       state: started
+       published_ports:
+        - 80:80        
 
     - name: Run php container
       docker_container:
@@ -40,11 +49,4 @@
        published_ports:
         - 9000:9000
 
-    - name: Run ngnix container
-      docker_container:
-       name: ngnix
-       auto-remove: yes
-       image: "shivapoudyal/mynginx:1.0"
-       state: started
-       published_ports:
-        - 80:80    
+     
