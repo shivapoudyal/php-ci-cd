@@ -30,15 +30,7 @@
     - name: installing docker-py python modules
       pip:
         name: docker-py
-        state: present  
-
-    - name: Run ngnix container
-      docker_container:
-       name: ngnix
-       image: "shivapoudyal/mynginx:1.0"
-       state: started
-       published_ports:
-        - 80:80        
+        state: present
 
     - name: Run php container
       docker_container:
@@ -46,6 +38,12 @@
        image: "shivapoudyal/myphp:1.0"
        state: started
        published_ports:
-        - 9000:9000
+        - 9000:9000    
 
-     
+    - name: Run ngnix container
+      docker_container:
+       name: ngnix
+       image: "shivapoudyal/mynginx:1.0"
+       state: started
+       published_ports:
+        - 80:80
