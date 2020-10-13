@@ -1,8 +1,9 @@
 php-image:
  container_name: php
- image: php:7-fpm
+ image: php:7.2-fpm
  volumes:
   - /var/lib/jenkins/workspace/php-ci-cd/:/phpprojects
+  - /var/www/docker-study.loc/recipe-02/docker/php.ini:/usr/local/etc/php/php.ini
 
 ngnix-image:
  container_name: nginx
