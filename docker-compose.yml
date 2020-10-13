@@ -1,16 +1,13 @@
-ngnix-image:
- container_name: nginx
- build: .
- ports:
-  - "80:80"
-
- links:
-   - php-image
-
-
 php-image:
  container_name: php
  image: php:7-fpm
  volumes:
   - /var/lib/jenkins/workspace/php-ci-cd/:/phpprojects
 
+ngnix-image:
+ container_name: nginx
+ build: .
+ ports:
+  - "80:80"
+ links:
+   - php-image
