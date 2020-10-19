@@ -36,7 +36,7 @@
       docker_container:
        name: php
        networks:
-        -name: network1
+        - name: network1
        image: "shivapoudyal/myphp:1.0"
        state: started
        published_ports:
