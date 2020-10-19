@@ -35,6 +35,8 @@
     - name: Run php container
       docker_container:
        name: php
+       networks:
+        -name: network1
        image: "shivapoudyal/myphp:1.0"
        state: started
        published_ports:
@@ -43,6 +45,8 @@
     - name: Run ngnix container
       docker_container:
        name: ngnix
+       networks:
+        - name: network1
        image: "shivapoudyal/mynginx:1.0"
        state: started
        published_ports:
